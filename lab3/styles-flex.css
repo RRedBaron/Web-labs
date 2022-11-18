@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  min-height: 180px;
+  font-size: 26px;
+  padding: 40px 35px;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(222, 241, 178, 1) 100%
+  );
+}
+
+.header h1 {
+  padding: 10px;
+  background-color: rgb(246, 246, 246);
+  border: 2px solid black;
+}
+
+.header-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.left > a {
+  font-weight: bolder;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.left ul {
+  margin-top: 20px;
+  border-style: dashed;
+  font-size: 22px;
+  list-style: none;
+}
+
+.main .article {
+  min-height: auto;
+  background-color: aliceblue;
+}
+
+.left {
+  min-width: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-container {
+  flex: 1;
+  display: flex;
+}
+
+.article {
+  flex: 1;
+  display: flex;
+}
+
+.right {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-top {
+  flex: 1;
+}
+
+.right-bottom {
+  flex: 1;
+}
+
+.right-top img {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.right-bottom img {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.bottom {
+  min-height: 180px;
+  display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(243, 190, 251, 1) 100%
+  );
+}
+
+.bottom-inner {
+  width: 100%;
+  align-self: center;
+}
+
+.bottom-inner p {
+  border: 2px solid black;
+  padding: 10px;
+  max-width: 35%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: palevioletred;
+}
+
+.article p {
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  padding: 20px;
+}
+
+li {
+  padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .main,
+  .article-container {
+    flex-direction: column;
+  }
+
+  .header {
+    font-size: 18px;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .left,
+  ul li {
+    display: inline;
+    padding: 15px;
+  }
+
+  .right {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .right-top,
+  .right-bottom {
+    max-width: 50%;
+  }
+}
